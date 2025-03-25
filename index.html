@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mở Shopee</title>
-
+    <title>Đang mở Shopee...</title>
+    <style>
+        body { display: none; } /* Ẩn toàn bộ nội dung */
+    </style>
     <script>
-        function openShopee() {
-            let shopeeUrl = "https://s.shopee.vn/40ScqqJ2cc";
+        function isFacebookApp() {
+            let ua = navigator.userAgent || navigator.vendor;
+            return ua.includes("FBAN") || ua.includes("FBAV");
+        }
 
-            // Cách 1: Mở qua iframe (Facebook có thể không chặn)
+        function openShopee() {
+            let shopeeUrl = "shopee://app?deep_link=https://shopee.vn/your-product-link";
+
+            // Thử mở bằng iFrame (ẩn để tránh chặn)
             let iframe = document.createElement('iframe');
             iframe.style.display = 'none';
             iframe.src = shopeeUrl;
             document.body.appendChild(iframe);
 
-            // Cách 2: Mở bằng JavaScript event click
+            // Sau 500ms, dùng window.location như backup
             setTimeout(() => {
                 window.location.href = shopeeUrl;
             }, 500);
         }
+
+        // Tự động mở Shopee khi truy cập trên Facebook App
+        if (isFacebookApp()) {
+            openShopee();
+        }
     </script>
 </head>
 <body>
-    <h2>Nhấp vào nút bên dưới để mở Shopee</h2>
-    <button onclick="openShopee()">Mở Shopee</button>
 </body>
 </html>

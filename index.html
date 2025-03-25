@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <meta property="og:url" content="https://bright-rolypoly-2454a0.netlify.app/" />
-    <meta http-equiv="refresh" content="0; url=https://shope.ee/">
+
+    <!-- Open Graph để Facebook nhận diện -->
+    <meta property="og:title" content="Khuyến mãi Shopee" />
+    <meta property="og:description" content="Giảm giá cực sốc trên Shopee!" />
+    <meta property="og:image" content="https://via.placeholder.com/500" />
+    <meta property="og:url" content="https://your-netlify-site.netlify.app/" />
+    
+    <script>
+        function isFacebookApp() {
+            let ua = navigator.userAgent || navigator.vendor;
+            return ua.includes("FBAN") || ua.includes("FBAV");
+        }
+
+        if (isFacebookApp()) {
+            window.location.replace("https://s.shopee.vn/40ScqqJ2cc");
+        }
+    </script>
 </head>
 <body>
-    <p>Đang chuyển hướng...</p>
+    <p>Nhấp vào <a href="https://shopee.vn/your-product-link">đây</a> nếu không tự động chuyển hướng.</p>
 </body>
 </html>

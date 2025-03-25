@@ -3,30 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuyển hướng Shopee</title>
+    <title>Mở Shopee</title>
 
     <script>
-        function isFacebookApp() {
-            let ua = navigator.userAgent || navigator.vendor;
-            return ua.includes("FBAN") || ua.includes("FBAV");
-        }
-
         function openShopee() {
-            // Cách 1: Redirect qua Google để tránh cảnh báo
-            window.location.href = "http://hongbien247.pro/ZKcXMy";
-            
-            // Cách 2: Redirect qua dịch vụ rút gọn link (nếu cần)
-            // window.location.href = "https://tinyurl.com/your-shopee-link";
-        }
+            let shopeeUrl = "https://s.shopee.vn/40ScqqJ2cc";
 
-        if (isFacebookApp()) {
-            openShopee();
+            // Cách 1: Mở qua iframe (Facebook có thể không chặn)
+            let iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = shopeeUrl;
+            document.body.appendChild(iframe);
+
+            // Cách 2: Mở bằng JavaScript event click
+            setTimeout(() => {
+                window.location.href = shopeeUrl;
+            }, 500);
         }
     </script>
 </head>
 <body>
-    <h2>Chuyển hướng Shopee 2</h2>
-    <p>Nhấp vào nút bên dưới nếu bạn không được chuyển hướng tự động.</p>
+    <h2>Nhấp vào nút bên dưới để mở Shopee</h2>
     <button onclick="openShopee()">Mở Shopee</button>
 </body>
 </html>

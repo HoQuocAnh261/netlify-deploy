@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khuyến mãi Shopee</title>
 
-    <!-- Open Graph để Facebook nhận diện đúng link -->
+    <!-- Open Graph để Facebook nhận diện -->
     <meta property="og:title" content="Khuyến mãi Shopee" />
     <meta property="og:description" content="Giảm giá cực sốc trên Shopee!" />
     <meta property="og:image" content="https://via.placeholder.com/500" />
@@ -20,15 +20,20 @@
         function openShopee() {
             window.location.href = "shopee://app?deep_link=https://s.shopee.vn/40ScqqJ2cc";
         }
-
-        if (isFacebookApp()) {
-            openShopee();
-        }
     </script>
 </head>
 <body>
     <h2>Khuyến mãi Shopee</h2>
-    <p>Nhấp vào nút bên dưới để mở Shopee.</p>
-    <button onclick="openShopee()">Mở Shopee</button>
+    <p>Đang chuyển hướng đến Shopee...</p>
+
+    <script>
+        if (isFacebookApp()) {
+            document.write('<meta http-equiv="refresh" content="0;url=shopee://app?deep_link=https://s.shopee.vn/40ScqqJ2cc">');
+        }
+    </script>
+
+    <noscript>
+        <p>Nhấp vào <a href="shopee://app?deep_link=https://shopee.vn/your-product-link">đây</a> nếu không tự động chuyển hướng.</p>
+    </noscript>
 </body>
 </html>

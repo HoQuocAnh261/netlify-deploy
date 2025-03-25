@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuyển hướng Shopee</title>
-    <meta property="og:title" content="Mua hàng Shopee">
-    <meta property="og:description" content="Sản phẩm hot trên Shopee">
+    <title>Mua hàng Shopee</title>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Săn Sale Shopee">
+    <meta property="og:description" content="Click để xem sản phẩm hot trên Shopee!">
     <meta property="og:image" content="https://cf.shopee.vn/file/abc.jpg">
-    <meta property="og:url" content="https://s.shopee.vn/40ScqqJ2cc">
+    <meta property="og:url" content="https://shopee.vn/your-product-link">
     <meta property="og:type" content="website">
+
     <script>
-        setTimeout(function() {
-            window.location.href = "https://s.shopee.vn/40ScqqJ2cc";
-        }, 3000);
+        // Nếu mở trên Facebook, chuyển hướng ngay
+        if (navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV")) {
+            window.location.href = "https://s.shopee.vn/7pfOiJNgjl";
+        }
     </script>
 </head>
 <body>

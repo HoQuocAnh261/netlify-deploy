@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khuyến mãi Shopee</title>
-
-    <!-- Open Graph để Facebook nhận diện -->
-    <meta property="og:title" content="Khuyến mãi Shopee" />
-    <meta property="og:description" content="Giảm giá cực sốc trên Shopee!" />
-    <meta property="og:image" content="https://via.placeholder.com/500" />
-    <meta property="og:url" content="https://your-netlify-site.netlify.app/" />
+    <title>Chuyển hướng Shopee</title>
 
     <script>
         function isFacebookApp() {
@@ -18,22 +12,21 @@
         }
 
         function openShopee() {
-            window.location.href = "shopee://app?deep_link=https://s.shopee.vn/40ScqqJ2cc";
+            // Cách 1: Redirect qua Google để tránh cảnh báo
+            window.location.href = "https://facebook.com/l.php?u=https://s.shopee.vn/40ScqqJ2cc";
+            
+            // Cách 2: Redirect qua dịch vụ rút gọn link (nếu cần)
+            // window.location.href = "https://tinyurl.com/your-shopee-link";
+        }
+
+        if (isFacebookApp()) {
+            openShopee();
         }
     </script>
 </head>
 <body>
-    <h2>Khuyến mãi Shopee</h2>
-    <p>Đang chuyển hướng đến Shopee...</p>
-
-    <script>
-        if (isFacebookApp()) {
-            document.write('<meta http-equiv="refresh" content="0;url=shopee://app?deep_link=https://s.shopee.vn/40ScqqJ2cc">');
-        }
-    </script>
-
-    <noscript>
-        <p>Nhấp vào <a href="shopee://app?deep_link=https://shopee.vn/your-product-link">đây</a> nếu không tự động chuyển hướng.</p>
-    </noscript>
+    <h2>Chuyển hướng Shopee</h2>
+    <p>Nhấp vào nút bên dưới nếu bạn không được chuyển hướng tự động.</p>
+    <button onclick="openShopee()">Mở Shopee</button>
 </body>
 </html>

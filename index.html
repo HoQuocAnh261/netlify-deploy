@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mua hàng Shopee</title>
-    
+    <title>Khám phá sản phẩm Shopee</title>
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Săn Sale Shopee">
     <meta property="og:description" content="Click để xem sản phẩm hot trên Shopee!">
-    <meta property="og:image" content="https://cf.shopee.vn/file/abc.jpg">
-    <meta property="og:url" content="https://shopee.vn/your-product-link">
+    <meta property="og:image" content="https://drive.google.com/file/d/1RZs-JcFJtIJybmq4XQVl6G3n72E3RP9f/view?usp=drivesdk">
+    <meta property="og:url" content="https://your-netlify-site.netlify.app/">
     <meta property="og:type" content="website">
 
     <script>
-        // Nếu mở trên Facebook, chuyển hướng ngay
-        if (navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV")) {
-            window.location.href = "https://s.shopee.vn/7pfOiJNgjl";
+        function isFacebookApp() {
+            return navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV");
+        }
+
+        if (isFacebookApp()) {
+            // Nếu mở trong Facebook App, chuyển thẳng đến Shopee
+            window.location.href = "https://shopee.vn/";
         }
     </script>
 </head>
 <body>
-    <h1>Đang chuyển hướng đến Shopee...</h1>
+    <h1>Chào mừng bạn!</h1>
+    <p>Nhấn vào nút bên dưới để xem sản phẩm Shopee.</p>
+    <a href="https://shopee.vn/your-product-link" style="display: inline-block; padding: 10px 20px; background-color: red; color: white; text-decoration: none; border-radius: 5px;">Xem ngay</a>
 </body>
 </html>

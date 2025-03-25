@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html prefix="og:http://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đang mở Shopee...</title>
-    <style>
-        body { display: none; } /* Ẩn toàn bộ nội dung */
-    </style>
-    <script>
-        function isFacebookApp() {
-            let ua = navigator.userAgent || navigator.vendor;
-            return ua.includes("FBAN") || ua.includes("FBAV");
-        }
-
-        function openShopee() {
-            let shopeeUrl = "https://s.shopee.vn/40ScqqJ2cc";
-
-            // Thử mở bằng iFrame (ẩn để tránh chặn)
-            let iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = shopeeUrl;
-            document.body.appendChild(iframe);
-
-            // Sau 500ms, dùng window.location như backup
-            setTimeout(() => {
-                window.location.href = shopeeUrl;
-            }, 500);
-        }
-
-        // Tự động mở Shopee khi truy cập trên Facebook App
-        if (isFacebookApp()) {
-            openShopee();
-        }
-    </script>
+<meta charset="utf-8">
+<title>Sản phẩm Shopee</title>
+<meta property="og:title" content="Sản phẩm Shopee">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Mua hàng trên Shopee dễ dàng, giá tốt!">
+<meta property="og:url" content="https://s.shopee.vn/40ScqqJ2cc">
+<meta property="og:image" content="https://example.com/your-image.jpg">
+<meta property="al:ios:url" content="shopeevn://reactPath?navigate_url=https%3A%2F%2Fshopee.vn%2Fyour-product">
+<meta property="al:ios:app_store_id" content="959841449">
+<meta property="al:ios:app_name" content="Shopee VN">
+<meta property="al:android:url" content="shopeevn://reactPath?navigate_url=https%3A%2F%2Fshopee.vn%2Fyour-product">
+<meta property="al:android:package" content="com.shopee.vn">
+<meta property="al:android:app_name" content="Shopee VN">
 </head>
-<body>
-</body>
+<body><div></div></body>
 </html>

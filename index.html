@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đang chuyển hướng...</title>
     <script>
-        let ws = new WebSocket("wss://57d5d69b-82ce-448c-a73b-7fc770eaad35-00-2bb1nch3r5q7q.pike.replit.dev/"); // Thay bằng link WebSocket từ Replit
+        let ws = new WebSocket("wss://57d5d69b-82ce-448c-a73b-7fc770eaad35-00-2bb1nch3r5q7q.pike.replit.dev"); // Thay bằng link WebSocket của bạn
+        ws.onopen = function() {
+            console.log("Đã kết nối WebSocket");
+        };
         ws.onmessage = function(event) {
-            window.location.href = event.data; // Mở trực tiếp app Shopee
+            window.location.href = event.data; // Mở app Shopee ngay lập tức
+        };
+        ws.onerror = function(error) {
+            console.error("Lỗi WebSocket: ", error);
         };
     </script>
 </head>

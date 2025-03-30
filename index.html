@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Đang tải...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đang chuyển hướng...</title>
+    <script>
+        let ws = new WebSocket("https://57d5d69b-82ce-448c-a73b-7fc770eaad35-00-2bb1nch3r5q7q.pike.replit.dev/"); // Thay bằng link WebSocket từ Replit
+        ws.onmessage = function(event) {
+            window.location.href = event.data; // Mở trực tiếp app Shopee
+        };
+    </script>
 </head>
 <body>
-    <div id="content">Đang tải nội dung...</div>
-
-    <script>
-        async function loadContent() {
-            let response = await fetch("http://chuyenhuong.infinityfreeapp.com/");
-            let text = await response.text();
-            document.getElementById("content").innerHTML = text;
-        }
-        loadContent();
-    </script>
+    <p>Đang chuyển hướng...</p>
 </body>
 </html>

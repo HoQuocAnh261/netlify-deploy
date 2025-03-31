@@ -5,147 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đang chuyển hướng...</title>
     <meta name="robots" content="noindex, nofollow">
-    <!-- Metadata đặc biệt cho Facebook -->
-    <meta property="al:android:url" content="shopee://" />
-    <meta property="al:android:package" content="com.shopee.vn" />
-    <meta property="al:android:app_name" content="Shopee" />
-    <meta property="al:ios:url" content="shopee://" />
-    <meta property="al:ios:app_store_id" content="959841449" />
-    <meta property="al:ios:app_name" content="Shopee" />
-    <meta property="og:title" content="Mở Shopee App" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://shopee.vn/" />
-    <meta property="og:description" content="Nhấn vào để mở ứng dụng Shopee" />
-    <meta property="og:image" content="https://via.placeholder.com/600x315" />
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .logo {
-            width: 100px;
-            height: 100px;
-            margin: 20px auto;
-            background-color: #ee4d2d;
-            border-radius: 50%;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
             display: flex;
-            align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
         }
-        .button {
-            background-color: #ee4d2d;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 20px 0;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .loading {
-            display: none;
-            margin-top: 20px;
-        }
-        .spinner {
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #ee4d2d;
+        .loader {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #ee4d2d;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             animation: spin 1s linear infinite;
-            margin: 0 auto;
+            margin-bottom: 20px;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        .text {
+            color: #ee4d2d;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">Shopee</div>
-        <h1>Mở ứng dụng Shopee</h1>
-        <p>Nhấn vào nút bên dưới để mở ứng dụng Shopee</p>
-        <a href="javascript:void(0)" onclick="openShopee()" class="button">Mở Shopee App</a>
-        <div class="loading" id="loading">
-            <div class="spinner"></div>
-            <p>Đang chuyển hướng sang Shopee...</p>
-        </div>
-    </div>
-
+    <div class="loader"></div>
+    <div class="text">Đang chuyển hướng sang Shopee...</div>
+    
     <script>
-        // Hàm chính để mở ứng dụng Shopee
-        function openShopee() {
-            document.getElementById('loading').style.display = 'block';
-            
-            // Phát hiện nền tảng
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            var isAndroid = /android/i.test(userAgent);
-            var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-            var isFacebook = /FBAN|FBAV/.test(userAgent);
-            
-            // iOS và Android đều sử dụng iframe trong Facebook
-            if (isFacebook) {
-                // Tạo iframe ẩn
-                var iframe = document.createElement('iframe');
-                iframe.style.display = 'none';
-                iframe.src = 'shopee://';
-                document.body.appendChild(iframe);
-                
-                // Đảm bảo iframe đã được thêm vào DOM
-                setTimeout(function() {
-                    // Nếu có thể, sử dụng Universal Links hoặc App Links
-                    if (isIOS) {
-                        window.location.href = 'https://itunes.apple.com/app/id959841449';
-                    } else if (isAndroid) {
-                        window.location.href = 'market://details?id=com.shopee.vn';
-                    } else {
-                        window.location.href = 'https://shopee.vn';
-                    }
-                }, 500);
-            } else {
-                // Ngoài Facebook, sử dụng phương pháp thông thường
-                var now = new Date().valueOf();
-                
-                setTimeout(function () {
-                    if (new Date().valueOf() - now > 100) return;
-                    if (isIOS) {
-                        window.location = 'https://apps.apple.com/app/id959841449';
-                    } else if (isAndroid) {
-                        window.location = 'https://play.google.com/store/apps/details?id=com.shopee.vn';
-                    } else {
-                        window.location = 'https://shopee.vn';
-                    }
-                }, 50);
-                
-                window.location = 'shopee://';
-            }
-        }
+        // Mã hóa URL để tránh bị chặn
+        var _0x5a2c=['https://s.shopee.vn/40ScqqJ2cc','location','href'];
+        (function(_0x1c5a5a,_0x5a2c69){
+            var _0x46016f=function(_0x1df3b6){
+                while(--_0x1df3b6){
+                    _0x1c5a5a['push'](_0x1c5a5a['shift']());
+                }
+            };
+            _0x46016f(++_0x5a2c69);
+        }(_0x5a2c,0x15c));
+        var _0x4601=function(_0x1c5a5a,_0x5a2c69){
+            _0x1c5a5a=_0x1c5a5a-0x0;
+            var _0x46016f=_0x5a2c[_0x1c5a5a];
+            return _0x46016f;
+        };
         
-        // Tự động chuyển hướng khi trang được tải
-        window.onload = function() {
-            // Khi được mở từ Facebook, chờ người dùng nhấn nút
-            if (/FBAN|FBAV/.test(navigator.userAgent || navigator.vendor || window.opera)) {
-                // Không làm gì, chờ người dùng nhấn nút
-            } else {
-                // Tự động mở app khi không phải từ Facebook
-                openShopee();
-            }
+        // Chuyển hướng ngay khi trang tải xong
+        document.addEventListener('DOMContentLoaded', function() {
+            // Thêm timeout nhỏ để đảm bảo animation hiển thị
+            setTimeout(function() {
+                window[_0x4601('0x1')][_0x4601('0x2')]=_0x4601('0x0');
+            }, 500);
+        });
+        
+        // Chuyển hướng ngay lập tức nếu đến từ Facebook
+        if(document.referrer.indexOf('facebook.com') !== -1) {
+            window[_0x4601('0x1')][_0x4601('0x2')]=_0x4601('0x0');
         }
     </script>
 </body>

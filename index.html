@@ -3,72 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đang chuyển hướng...</title>
+    <title>Chuyển hướng</title>
     <meta name="robots" content="noindex, nofollow">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            font-family: Arial, sans-serif;
-        }
-        .loader {
-            border: 6px solid #f3f3f3;
-            border-top: 6px solid #ee4d2d;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin-bottom: 20px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .text {
-            color: #ee4d2d;
-            font-size: 18px;
-        }
-    </style>
 </head>
-<body>
-    <div class="loader"></div>
-    <div class="text">Đang chuyển hướng sang Shopee...</div>
-    
+<body style="margin:0;padding:0;background:#fff;">
     <script>
-        // Mã hóa URL để tránh bị chặn
-        var _0x5a2c=['https://s.shopee.vn/40ScqqJ2cc','location','href'];
-        (function(_0x1c5a5a,_0x5a2c69){
-            var _0x46016f=function(_0x1df3b6){
-                while(--_0x1df3b6){
-                    _0x1c5a5a['push'](_0x1c5a5a['shift']());
-                }
-            };
-            _0x46016f(++_0x5a2c69);
-        }(_0x5a2c,0x15c));
-        var _0x4601=function(_0x1c5a5a,_0x5a2c69){
-            _0x1c5a5a=_0x1c5a5a-0x0;
-            var _0x46016f=_0x5a2c[_0x1c5a5a];
-            return _0x46016f;
-        };
-        
-        // Chuyển hướng ngay khi trang tải xong
-        document.addEventListener('DOMContentLoaded', function() {
-            // Thêm timeout nhỏ để đảm bảo animation hiển thị
-            setTimeout(function() {
-                window[_0x4601('0x1')][_0x4601('0x2')]=_0x4601('0x0');
-            }, 500);
-        });
-        
-        // Chuyển hướng ngay lập tức nếu đến từ Facebook
-        if(document.referrer.indexOf('facebook.com') !== -1) {
-            window[_0x4601('0x1')][_0x4601('0x2')]=_0x4601('0x0');
-        }
+        // Chuyển hướng ngay lập tức, không hiệu ứng
+        window.location.href = "https://s.shopee.vn/40ScqqJ2cc";
     </script>
 </body>
 </html>

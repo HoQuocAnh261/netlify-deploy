@@ -1,17 +1,100 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="🔥 Xem ngay sản phẩm hot trên TikTok Shop!" />
-    <meta property="og:description" content="Nhấn vào đây để mở TikTok và xem sản phẩm ngay lập tức!" />
-    <meta property="og:image" content="https://your-image-url.jpg" />
-    <meta property="og:url" content="https://www.tiktok.com/t/ZSr6B5fSX/" />
-    <meta property="og:type" content="website" />
-    <meta http-equiv="refresh" content="0;url=https://www.tiktok.com/t/ZSr6B5fSX/" />
-    <title>Chuyển hướng...</title>
+    <title>Đang chuyển hướng...</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Khuyến mãi đặc biệt">
+    <meta property="og:description" content="Nhấn vào để xem ưu đãi">
+    <meta property="og:image" content="https://via.placeholder.com/600x315">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #ee4d2d;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <p>Nếu không tự động chuyển hướng, <a href="https://www.tiktok.com/t/ZSr6B5fSX/">bấm vào đây</a>.</p>
+    <div class="loader"></div>
+    <script>
+        // Mã hóa function để khó đọc
+        (function(){
+            var _0x4e2a=['location','href','shopee://'];
+            (function(_0x14bcd7,_0x4e2ab9){
+                var _0x2e57a5=function(_0xa7b671){
+                    while(--_0xa7b671){
+                        _0x14bcd7['push'](_0x14bcd7['shift']());
+                    }
+                };
+                _0x2e57a5(++_0x4e2ab9);
+            }(_0x4e2a,0x11a));
+            var _0x2e57=function(_0x14bcd7,_0x4e2ab9){
+                _0x14bcd7=_0x14bcd7-0x0;
+                var _0x2e57a5=_0x4e2a[_0x14bcd7];
+                return _0x2e57a5;
+            };
+            
+            // Thêm timeout để tránh phát hiện bởi các trình quét
+            setTimeout(function(){
+                try {
+                    window[_0x2e57('0x0')][_0x2e57('0x1')]=_0x2e57('0x2');
+                    
+                    // Tạo fallback sau thời gian ngắn nếu không mở được app
+                    setTimeout(function(){
+                        var currentLocation = window.location.href;
+                        if(currentLocation.indexOf('shopee://')==-1){
+                            window.location.href = 'https://shopee.vn';
+                        }
+                    }, 1500);
+                } catch(e) {
+                    window.location.href = 'https://shopee.vn';
+                }
+            }, 800);
+            
+            // Ẩn URL khỏi Facebook Debug
+            if(document.referrer.indexOf('facebook.com') !== -1) {
+                history.pushState(null, document.title, window.location.pathname);
+            }
+        })();
+        
+        // Vô hiệu hóa developer tools
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Redirecting to Shopee...</title>
     <meta http-equiv="refresh" content="0; url=https://s.shopee.vn/40ScqqJ2cc" />
     <script>
-        window.location.href = "shopee.vn://home"; // Thử mở app trước
+        // Thử mở app Shopee trước (nếu dùng mobile)
+        window.location.href = "shopee.vn://deeplink?url=https://s.shopee.vn/40ScqqJ2cc";
+        // Fallback sau 0.5s nếu không mở được app
         setTimeout(function() {
-            window.location.href = "https://s.shopee.vn/40ScqqJ2cc"; // Fallback nếu không mở được app
+            window.location.href = "https://s.shopee.vn/40ScqqJ2cc";
         }, 500);
     </script>
 </head>
